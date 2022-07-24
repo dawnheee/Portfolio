@@ -1,38 +1,46 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: "Eulyoo1945-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2102-01@1.0/Eulyoo1945-Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  text-decoration: none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  /* font-family: "Fira Sans", sans-serif; */
+  font-family: "Eulyoo1945-Regular";
+}
+*::-webkit-scrollbar {
+  display: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+body {
+  height: 100%;
+  overflow: scroll;
+
+  background: black; /* Fallback */
+  animation: color 15s infinite linear;
+}
+
+img {
+  height: 100%;
+}
+
+@keyframes color {
+  0% {
+    background: black;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  25% {
+    background: darkgray;
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    background: rgb(179, 177, 177);
   }
 }
